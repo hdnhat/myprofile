@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap');
+
+:root {
+    --white: #ffffff;
+    --orange: #FD841F;
+    --violet: #6c5ce7;
+    --pink: #FC427B;
+    --gradient: linear-gradient(90deg, var(--violet), var(--pink));
+}
+
+/*chọn thành phần gốc */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    outline: none;
+    /*đường kẻ viền*/
+    border: none;
+    text-transform: capitalize;
+    /*chữ đầu viết hoa*/
+    transition: all 0.2s linear;
+
+}
+
+*::selection {
+    background: var(--gradient);
+    color: gray;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+/* xử lý thanh cuộn*/
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: hsl(0, 0%, 100%);
+
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--violet);
+
+}
+
+body {
+    overflow-x: hidden;
+    padding-left: 35rem;
+    background: var(--gradient);
+
+}
+
+section {
+    min-height: 100vh;
+    /*chiều cao tối thiểu*/
+    padding: 1rem;
+}
+
+.btn {
+    padding: 1rem 4rem;
+    background: white;
+    color: black;
+    cursor: pointer;
+    /*con trỏ chuột*/
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 5rem;
+    /*bo tròn viền*/
+}
+
+.btn:hover {
+    background: var(--gradient);
+
+}
+
+.heading {
+
+    text-align: center;
+    margin: 0 6rem;
+    font-size: 5rem;
+    padding: 1rem;
+    border-bottom: 0.1rem solid #2c3e50;
+    color: var(--white);
+
+}
+
+.heading span {
+    color: var(--orange);
+}
+
+header {
+    position: fixed;
+    /*vị trí cố định*/
+    top: 0;
+    left: 0;
+    z-index: 100;
+    height: 100%;
+    width: 35rem;
+    display: flex;
+    /*sắp xếp khối trong block linh hoạt hơn*/
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    /* sắp xếp căn chỉnh item*/
+    text-align: center;
+    background: var(--white);
+
+}
+
+header .user img {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    object-fit: cover;
+    /* thay đổi kích thước phù hợp với vùng chứa*/
+    margin-bottom: 1rem;
+    border: 0.4rem solid var(--violet);
+
+}
+
+header .user .name {
+    font-size: 3.5rem;
+    color: black;
+
+}
+
+header .user .post {
+    font-size: 2rem;
+    color: black;
+
+}
+
+header .navbar {
+    width: 100%;
+
+}
+
+header .navbar ul {
+    list-style: none;
+    /*loại bỏ dấu chấm*/
+    padding: 1rem 3rem;
+
+
+}
+
+header .navbar ul li a {
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background: white;
+    color: black;
+    font-size: 2rem;
+    border-radius: 5rem;
+    border: 0.1rem solid;
+
+}
+
+header .navbar ul li a:hover {
+    background: var(--gradient);
+}
+
+
+.home {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0 15rem
+}
+
+.home h4 {
+    font-size: 2.5rem;
+    color: var(--orange);
+}
+
+.home h2 {
+    font-size: 5rem;
+    color: var(--white);
+}
+
+.home h2 span {
+    color: var(--orange);
+
+}
+
+.home p {
+    font-size: 2rem;
+    color: var(--white);
+    padding: 1rem 0;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /*Cho phép các items tự động xuống hàng*/
+    padding: 1rem 0;
+
+}
+
+.about .row .info h3 {
+    font-size: 2rem;
+    padding: 1rem 0;
+    font-weight: normal;
+    color: var(--white);
+}
+
+.about .row .info h3 span {
+    color: var(--orange);
+    font-weight: 700;
+    /*in đậm*/
+}
+
+.education .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    padding-left: 3rem;
+}
+
+.education .box-container .box {
+    width: 27rem;
+    margin: 4rem 1rem;
+    padding-left: 4rem;
+    border-left: 0.15rem solid var(--orange);
+    position: relative;
+}
+
+.education .box-container .box span {
+    font-size: 1.3rem;
+    background: var(--gradient);
+    color: var(--white);
+    border-radius: 5rem;
+    padding: 0.5rem 2.5rem;
+}
+
+.education .box-container .box h3 {
+    font-size: 2rem;
+    color: var(--white);
+    padding-top: 1.5rem;
+
+}
+
+.education .box-container .box p {
+    font-size: 1.4rem;
+    color: var(--white);
+    padding: 1rem 0;
+
+}
+
+.education .box-container .box i {
+    position: absolute;
+    top: -1.5rem;
+    left: -2.5rem;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--white);
+    background: var(--orange);
+}
+
+.portfolio .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.portfolio .box-container .box {
+    height: 20rem;
+    width: 26rem;
+    border-radius: 1rem;
+    margin: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+.portfolio .box-container .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.portfolio .box-container .box:hover img {
+    transform: scale(1.1);
+}
+
+.contact .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact .row .content {
+    flex: 1 1 30rem;
+    padding: 4rem;
+    padding-bottom: 0;
+
+}
+
+.contact .row .content .title {
+    text-transform: uppercase;
+    color: var(--orange);
+    font-size: 3rem;
+    padding-bottom: 2rem;
+
+}
+
+.contact .row .content .info h3 {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--white);
+    padding: 1rem 0;
+    font-weight: normal;
+
+}
+
+.contact .row .content h3 i {
+    padding-right: 1rem;
+    color: var(--orange);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Responsive*/
+@media(max-width:1200px) {
+    html {
+        font-size: 55%;
+    }
+
+    .home {
+        padding: 1rem 4rem;
+    }
+}
+
+
+@media(max-width:991px) {
+    header {
+        left: -120%;
+    }
+
+    body {
+        padding: 0;
+    }
+
+}
+
+
+@media(max-width:768px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+
+@media(max-width:400px) {
+    header {
+        width: 100vw;
+    }
+
+    .heading {
+        margin: 0 3rem;
+    }
+
+}
